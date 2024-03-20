@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/places"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Agregar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-row>
+    <ion-col>
+      <ion-card>
+        <ion-card-content>
+          <!-- Agrega el atributo ngModel para vincular los valores a las propiedades en la clase TypeScript -->
+          <ion-input type="text" placeholder="Nombre" [(ngModel)]="titleValue"></ion-input>
+          <ion-input type="text" placeholder="Http://imageURL" [(ngModel)]="imageURLValue"></ion-input>
+          <!-- Llama a la función saveNewPlace y pasa los valores como argumentos -->
+          <ion-button color="success" (click)="saveNewPlace()">
+            Agregar
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-content>
